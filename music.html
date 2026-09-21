@@ -11,8 +11,8 @@
                 const encodedQuery = encodeURIComponent(query);
                 
                 // 2. Сюда пропишите любые сайты для одновременного поиска
-                const url1 = `https://ru.hitmoz.org/search?q={encodedQuery}`;
-                const url2 = `https://skysound7.com/search?q={encodedQuery}`;
+                const url1 = `https://ru.hitmoz.org/search?q=${encodedQuery}`;
+                const url2 = `https://skysound7.com/search?q=${encodedQuery}`;
                 
                 // 3. Открываем первый сайт в текущей вкладке, а второй — в новой фоновой
 		window.open(url1, '_blank');
