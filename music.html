@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        window.onload = function() {
+            // 1. Извлекаем поисковый запрос из ссылки
+            const params = new URLSearchParams(window.location.search);
+            const query = params.get('q');
+            
+            if (query) {
+                const encodedQuery = encodeURIComponent(query);
+                
+                // 2. Сюда пропишите любые сайты для одновременного поиска
+                const url1 = `https://ru.hitmoz.org/search?q={encodedQuery}`;
+                const url2 = `https://skysound7.com/search?q={encodedQuery}`;
+                
+                // 3. Открываем первый сайт в текущей вкладке, а второй — в новой фоновой
+		window.open(url1, '_blank');
+                window.open(url2, '_blank');
+            }
+        };
+    </script>
+</head>
+<body></body>
+</html>
